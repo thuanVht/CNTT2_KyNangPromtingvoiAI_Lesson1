@@ -3,9 +3,9 @@
 ## A. Bảng che mờ
 | PII thật | Nhãn | Loại |
 |---|---|---|
-| Võ Hoàng T | `[TEN_KH]` | Họ tên |
+| Pham Minh C | `[TEN_KH]` | Họ tên |
 | 083867777 | `[SDT_KH]` | Số điện thoại |
-| ronaldovn@gmail.com | `[EMAIL_KH]` | Email |
+| minhc@gmail.com | `[EMAIL_KH]` | Email |
 | hochiminh | `[DIA_CHI_KH]` | Địa chỉ |
 
 ## B. Masked Input
@@ -22,7 +22,7 @@ Email: "Tôi là [TEN_KH] (SĐT: [SDT_KH], Email: [EMAIL_KH], ở [DIA_CHI_KH]).
 ```
 
 ## D. Thư sau khi De-mask
-> Kính gửi Quý khách **Vo Hoang T**,
+> Kính gửi Quý khách **Pham Minh C**,
 > MartX chân thành xin lỗi vì đơn hàng thịt bò Wagyu ngày 20/09 tại MartX District 7 bị giao chậm 3 tiếng, làm ảnh hưởng đến tiệc gia đình của Quý khách. Yêu cầu bồi thường đã được chuyển đến bộ phận có thẩm quyền để xem xét. Nhân viên sẽ liên hệ Quý khách qua số **0988.111.222** trong thời gian sớm nhất.
 > Trân trọng,
 > Bộ phận CSKH MartX
