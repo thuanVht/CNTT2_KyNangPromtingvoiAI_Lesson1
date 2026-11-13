@@ -10,9 +10,10 @@ Lệnh "kém nhất, sa thải ngay" chỉ dựa trên con số. Số liệu th�
 
 ## Phần 2: Sơ đồ quy trình
 
+
 ```mermaid
 flowchart LR
-    A ["Nhập dữ liệu<br/>(ẩn tên, nêu tiêu chí)"] --> B["AI đề xuất<br/>(chỉ để tham khảo)"]
+    A["Nhập dữ liệu<br/>(ẩn tên, nêu tiêu chí)"] --> B["AI đề xuất<br/>(chỉ để tham khảo)"]
     B --> C["Người thẩm định<br/>(HR + quản lý + pháp chế)"]
     C -->|"Còn nghi vấn"| B
     C -->|"Đạt"| D["Ký quyết định<br/>(người có thẩm quyền, lưu hồ sơ)"]
