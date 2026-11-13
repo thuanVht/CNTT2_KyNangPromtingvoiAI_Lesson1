@@ -1,0 +1,21 @@
+# Session01 - Ex05: Human-in-the-loop
+
+## Phần 1: 2 vi phạm của Trưởng phòng
+
+**1. Bỏ qua Human-in-the-loop, đổ trách nhiệm cho AI**
+Ký sa thải mà không kiểm tra lại, nên thực chất AI quyết định còn người chỉ ký cho có. AI chỉ là công cụ gợi ý, không có tư cách pháp lý. Người ký mới là người chịu trách nhiệm. Nói "tôi không can thiệp nên công bằng" là sai, vì không can thiệp chính là lỗi.
+
+**2. Dùng AI quyết định chuyện nhân sự mà không xét bias và bối cảnh**
+Lệnh "kém nhất, sa thải ngay" chỉ dựa trên con số. Số liệu thấp có thể do nghỉ ốm, nghỉ thai sản, vị trí khó, hoặc dữ liệu cũ đã thiên lệch sẵn. Đưa dữ liệu cá nhân của 50 người vào AI mà không kiểm tra bảo mật cũng là rủi ro. Hậu quả: sa thải sai, bị kiện, mất uy tín.
+
+## Phần 2: Sơ đồ quy trình
+
+```mermaid
+flowchart LR
+    A ["Nhập dữ liệu<br/>(ẩn tên, nêu tiêu chí)"] --> B["AI đề xuất<br/>(chỉ để tham khảo)"]
+    B --> C["Người thẩm định<br/>(HR + quản lý + pháp chế)"]
+    C -->|"Còn nghi vấn"| B
+    C -->|"Đạt"| D["Ký quyết định<br/>(người có thẩm quyền, lưu hồ sơ)"]
+```
+
+**Kết luận:** AI chỉ gợi ý, con người quyết định và chịu trách nhiệm.

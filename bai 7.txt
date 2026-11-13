@@ -1,0 +1,30 @@
+# Data Masking - Thư khiếu nại khách VIP
+
+## A. Bảng che mờ
+| PII thật | Nhãn | Loại |
+|---|---|---|
+| Võ Hoàng T | `[TEN_KH]` | Họ tên |
+| 083867777 | `[SDT_KH]` | Số điện thoại |
+| ronaldovn@gmail.com | `[EMAIL_KH]` | Email |
+| hochiminh | `[DIA_CHI_KH]` | Địa chỉ |
+
+## B. Masked Input
+> Tôi là `[TEN_KH]` (SĐT: `[SDT_KH]`, Email: `[EMAIL_KH]`, ở `[DIA_CHI_KH]`). Ngày 20/09 tôi mua 2kg thịt bò Wagyu giá 4.500.000 VNĐ tại MartX District 7 nhưng bị giao chậm 3 tiếng làm hỏng tiệc gia đình. Tôi yêu cầu bồi thường 100%!
+
+## C. Prompt gửi AI
+```
+Bạn là nhân viên CSKH của MartX. Soạn thư xin lỗi dưới 150 từ cho email bên dưới.
+Gọi khách là "Quý khách [TEN_KH]". Xin lỗi chân thành, nói sẽ chuyển yêu cầu
+bồi thường cho bộ phận có thẩm quyền (không tự hứa 100%), và sẽ liên hệ qua [SDT_KH].
+Giữ nguyên các nhãn trong ngoặc vuông, không đoán thông tin thật.
+
+Email: "Tôi là [TEN_KH] (SĐT: [SDT_KH], Email: [EMAIL_KH], ở [DIA_CHI_KH]). Ngày 20/09 tôi mua 2kg thịt bò Wagyu giá 4.500.000 VNĐ tại MartX District 7 nhưng bị giao chậm 3 tiếng làm hỏng tiệc gia đình. Tôi yêu cầu bồi thường 100%!"
+```
+
+## D. Thư sau khi De-mask
+> Kính gửi Quý khách **Vo Hoang T**,
+> MartX chân thành xin lỗi vì đơn hàng thịt bò Wagyu ngày 20/09 tại MartX District 7 bị giao chậm 3 tiếng, làm ảnh hưởng đến tiệc gia đình của Quý khách. Yêu cầu bồi thường đã được chuyển đến bộ phận có thẩm quyền để xem xét. Nhân viên sẽ liên hệ Quý khách qua số **0988.111.222** trong thời gian sớm nhất.
+> Trân trọng,
+> Bộ phận CSKH MartX
+
+*Bảng A chỉ lưu nội bộ, không gửi cho AI. Sau khi AI trả thư, thay nhãn bằng thông tin thật rồi đọc lại trước khi gửi.*
